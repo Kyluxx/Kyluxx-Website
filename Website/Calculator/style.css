@@ -8,7 +8,8 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +18,10 @@ body {
 
 /* Calculator Styling */
 .calculator {
-    background-color: #fff;
+    background-color: #1f1f1f; /* Dark calculator background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow */
     width: 280px;
 }
 
@@ -30,10 +31,10 @@ body {
     font-size: 2em;
     text-align: right;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #333; /* Darker border */
     border-radius: 5px;
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: #292929; /* Dark input background */
+    color: #e0e0e0; /* Light text color */
 }
 
 /* Aligning buttons */
@@ -48,15 +49,16 @@ button {
     font-size: 1.5em;
     border: none;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #292929; /* Dark button background */
+    color: #e0e0e0; /* Light text color */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #3d3d3d; /* Slightly lighter on hover */
 }
 
 button:active {
-    background-color: #bbb;
+    background-color: #525252; /* Even lighter when active */
 }
