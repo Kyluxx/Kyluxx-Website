@@ -69,6 +69,6 @@
         <p>© 2024 Kyluxx | All Rights Reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
