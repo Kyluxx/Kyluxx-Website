@@ -5,8 +5,8 @@ body, html {
     font-family: 'Arial', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 /* Navbar */
@@ -15,9 +15,9 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    background: linear-gradient(90deg, #1a1a1a, #333);
     color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -28,25 +28,25 @@ body, html {
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #e0e0e0;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #00d9ff;
+    color: #00e5ff;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('assets/hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('./nightsky.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #e0e0e0;
 }
 
 .hero-content {
@@ -54,11 +54,11 @@ body, html {
     padding: 30px 50px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .highlight {
-    color: #00d9ff;
+    color: #00e5ff;
     font-weight: bold;
 }
 
@@ -66,43 +66,38 @@ body, html {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 30px;
-    background: #00d9ff;
-    color: #fff;
+    background: #00e5ff;
+    color: #121212;
     border: none;
     border-radius: 25px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
 }
 
 .btn:hover {
-    background: #6a11cb;
+    background: #1a1a1a;
+    color: #00e5ff;
 }
 
 /* About Section */
 .about {
     padding: 60px 20px;
     text-align: center;
-    background: #f4f4f9;
+    background: #1e1e1e;
 }
 
 .about h2 {
-    color: #2575fc;
+    color: #00e5ff;
     margin-bottom: 20px;
     font-size: 2rem;
 }
 
 .about p {
     font-size: 1.1rem;
-    color: #555;
-}
-
-/* Projects Section */
-.projects {
-    padding: 60px 20px;
-    background-color: #fff;
+    color: #cccccc;
 }
 
 .project-grid {
@@ -112,30 +107,11 @@ body, html {
     justify-items: center;
 }
 
-.project-card {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
 .project-card h3 {
     margin: 15px 0 10px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #00e5ff;
     text-align: center;
 }
 
@@ -143,11 +119,11 @@ body, html {
 .contact {
     padding: 60px 20px;
     text-align: center;
-    background: #f4f4f9;
+    background: #1e1e1e;
 }
 
 .contact h2 {
-    color: #2575fc;
+    color: #00e5ff;
     margin-bottom: 20px;
 }
 
@@ -162,38 +138,84 @@ body, html {
     width: 90%;
     max-width: 500px;
     padding: 15px;
-    border: 2px solid #ddd;
+    border: 2px solid #333;
     border-radius: 25px;
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: border-color 0.5s ease;
 }
 
 .contact input:focus, .contact textarea:focus {
-    border-color: #2575fc;
+    border-color: #00e5ff;
     outline: none;
 }
 
 .contact button {
     padding: 12px 30px;
-    background: #00d9ff;
-    color: #fff;
+    background: #00e5ff;
+    color: #121212;
     border: none;
     border-radius: 25px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
 }
 
 .contact button:hover {
-    background: #6a11cb;
+    background: #1a1a1a;
+    color: #00e5ff;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px 0;
-    background: #333;
-    color: #fff;
+    background: #1a1a1a;
+    color: #e0e0e0;
     font-size: 0.9rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for projects */
+.projects {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+    width: 300px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Title Styling */
+.project-card a {
+    text-decoration: none; /* Removes underline */
+    color: #00e5ff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.s ease;
+}
+
+/* Subtitle / Description */
+.project-card p {
+    margin-top: 10px;
+    color: #e0e0e0;
+    font-size: 1rem;
 }
