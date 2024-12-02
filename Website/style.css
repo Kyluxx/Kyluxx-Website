@@ -4,6 +4,9 @@ body, html {
     padding: 0;
     font-family: 'Arial', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 /* Navbar */
@@ -12,93 +15,114 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
     color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #f39c12;
+    color: #00d9ff;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('assets/hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('assets/hero.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
+    color: #fff;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .highlight {
-    color: #f39c12;
+    color: #00d9ff;
+    font-weight: bold;
 }
 
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #f39c12;
+    padding: 12px 30px;
+    background: #00d9ff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
     text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #e67e22;
+    background: #6a11cb;
 }
 
 /* About Section */
 .about {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #f4f4f4;
+    background: #f4f4f9;
 }
 
 .about h2 {
-    color: #333;
+    color: #2575fc;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* Projects Section */
 .projects {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #fff;
 }
 
 .project-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .project-card {
-    width: 300px;
-    background: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
 }
 
 .project-card img {
@@ -109,47 +133,67 @@ body, html {
 
 .project-card h3 {
     margin: 15px 0 10px;
-    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
 }
 
 /* Contact Section */
 .contact {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #f4f4f4;
+    background: #f4f4f9;
+}
+
+.contact h2 {
+    color: #2575fc;
+    margin-bottom: 20px;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
 }
 
 .contact input, .contact textarea {
-    width: 80%;
+    width: 90%;
     max-width: 500px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #2575fc;
+    outline: none;
 }
 
 .contact button {
-    padding: 10px 20px;
-    background-color: #f39c12;
+    padding: 12px 30px;
+    background: #00d9ff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #e67e22;
+    background: #6a11cb;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     background: #333;
     color: #fff;
+    font-size: 0.9rem;
 }
