@@ -1,0 +1,719 @@
+ /* General reset */
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+ body,
+ html {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins';
+   scroll-behavior: smooth;
+   background-color: #121212;
+   color: #e0e0e0;
+   text-decoration: none;
+ }
+
+
+
+ .progCon {
+   display: flex;
+
+   justify-content: space-between;
+ }
+
+ .progCon p {
+   margin: 0;
+ }
+
+ .progCon p.p1 {
+   text-align: left;
+   /* Aligns text to the left (default) */
+ }
+
+ .progCon p.p2 {
+   text-align: right;
+   /* Aligns text to the right */
+ }
+
+ /* Progress container */
+ .progress-container {
+   width: 100%;
+   height: 10px;
+   background-color: #e0e0e0;
+   border-radius: 5px;
+   overflow: hidden;
+   position: relative;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Progress bar */
+ .progress-bar {
+   width: 0;
+   /* Start empty */
+   height: 100%;
+   background: linear-gradient(to right, #00e5ff, #007bff);
+   border-radius: 5px;
+   transition: width 2s ease-in-out;
+   /* Smooth animation */
+ }
+
+ .progress-bar3 {
+   width: 100%;
+   /* Start Full */
+   height: 100%;
+   background: linear-gradient(to right, #00e5ff, #007bff);
+   border-radius: 5px;
+   transition: width 3s ease-in-out;
+ }
+
+ .chat-container {
+   position: relative;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   padding: 20px;
+ }
+
+ /* Chat Bubble Styling */
+ .chat-bubble {
+   max-width: 450px;
+   padding: 15px 20px;
+   padding-bottom: 15px;
+   background: linear-gradient(135deg,
+       rgba(0, 0, 75, 1), rgb(0, 0, 0, 1));
+   color: black;
+   font-size: 16px;
+   border-radius: 20px;
+   position: relative;
+   text-align: left;
+   box-shadow: 3px 4px 0px rgba(255, 255, 255, 0.1);
+   animation: fadeInUp 0.8s ease-out;
+ }
+
+ .chat-bubble p {
+   margin: 0px;
+   color: white;
+   line-height: 2;
+ }
+
+ /* Arrow pointing upward */
+ .chat-bubble::after {
+   content: '';
+   position: absolute;
+   top: -12px;
+   left: 4vh;
+   transform: translateX(-50%);
+   width: 0;
+   height: 0;
+   border-left: 13px solid transparent;
+   border-right: 13px solid transparent;
+   border-bottom: 13px solid rgb(0, 0, 75, 1);
+ }
+
+
+ a {
+   text-decoration: none;
+ }
+
+ .offCanvaslogo {
+   width: 20px;
+   height: 20px;
+   align-self: center;
+ }
+
+ .sosmedConD {
+   display: flex;
+   gap: 6.5px;
+   position: absolute;
+   left: 30px;
+ }
+ 
+ .color {
+  background: linear-gradient(to right, limegreen, cornflowerblue, palevioletred, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ .offCanvaslogoD {
+   width: 30px;
+   height: 30px;
+   align-self: center;
+ }
+
+ .sosmedCon {
+   display: flex;
+   gap: 10px
+ }
+
+ /* Offcanvas Sidebar */
+ .offcanvas {
+   position: fixed;
+   top: 0;
+   left: -100%;
+   /* Hidden off the screen initially */
+   width: 250px;
+   height: 100%;
+   background: linear-gradient(to right,
+       rgb(0, 0, 45), rgb(0, 0, 0));
+   color: white;
+   transition: left 0.4s ease;
+   padding: 35px 0px 20px 35px;
+   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+   z-index: 1000;
+ }
+
+ .offcanvas h1 {
+   margin: 0;
+   display: block;
+   height: 40px;
+ }
+
+ .offcanvas ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .offcanvas ul li {
+   margin: 15px 0;
+ }
+
+ .offcanvas ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: white;
+   font-size: 1.2rem;
+   transition: color 0.3s ease;
+ }
+
+ .offcanvas .ig:hover {
+   background: linear-gradient(to bottom, #6228d7, #ee2a7b, #f9ce34);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .offcanvas .wa:hover {
+   background: linear-gradient(to right, limegreen, darkgreen);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .offcanvas .gmail:hover {
+   background: linear-gradient(to right, #4285F4, #EA4335);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .offcanvas-copyright {
+   position: absolute;
+   bottom: 55px;
+   left: 20px;
+   font-weight: normal;
+   opacity: 0.3;
+ }
+
+ .gradient-text {
+   font-size: 3rem;
+   font-weight: bold;
+   background: linear-gradient(to right, #00e5ff, #ff00ff);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: none;
+   background: rgba(0, 0, 0, 0);
+   /*display: block;*/
+   /* Hidden by default */
+   z-index: 900;
+   /* Below offcanvas but above main content */
+ }
+
+ /* Close Button */
+ .close-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: none;
+   border: 1px solid white;
+   color: white;
+   width: 28px;
+   border-radius: 50px;
+   font-size: 1.5rem;
+   cursor: pointer;
+ }
+
+ /* Open Button */
+ .open-btn {
+   position: relative;
+   top: 0px;
+   left: -5px;
+   background: transparent;
+   border: none;
+   color: white;
+   font-size: 1.5rem;
+   padding: 5px 10px;
+   cursor: pointer;
+   border-radius: 5px;
+   z-index: 1100;
+   transition: background 0.3s ease;
+ }
+
+ .open-btn:hover {
+   background-color: #005f73;
+ }
+
+ /* Content */
+ .content {
+   padding: 20px;
+ }
+
+
+ /* Fixed Navbar */
+ .navbar {
+   position: fixed;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 20px;
+   padding-right: 20px;
+   top: 1vh;
+   left: 50%;
+   transform: translateX(-50.5%);
+   width: 95%;
+   z-index: 800;
+   box-sizing: border-box;
+   border-radius: 8.5px;
+   background: linear-gradient(to left,
+       rgba(0, 0, 75, 1), rgb(0, 0, 0, 1))
+ }
+
+ /* Change navbar links text color when scrolled */
+
+ /* Navbar */
+ /*
+.navbar {
+    display: flex
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+*/
+
+ .nav-links {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+ }
+
+ .nav-links li a {
+   text-decoration: none;
+   color: #e0e0e0;
+   font-weight: 600;
+   border-bottom-right-radius: 2px;
+   border-bottom-left-radius: 2px;
+   transition: color 0.5s ease, border-bottom 0.2s ease-in-out;
+
+ }
+
+ .nav-links li a:hover {
+   color: #00e5ff;
+ }
+
+ /* Hero Section */
+ .hero {
+   height: 100vh;
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+     url('./assets/nightsky.jpg') no-repeat center center/cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: #e0e0e0;
+ }
+
+.heroImg {
+  position: relative;
+  width: 60%;
+  filter: drop-shadow(0px 0px 5px rgba(0,200,255,0.6));
+}
+
+ .hero-content {
+   background: rgba(255, 255, 255, 0.1);
+   padding: 20px 50px;
+   border-radius: 15px;
+   backdrop-filter: blur(10px); 
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+ }
+
+/* Animation class */
+.fade {
+  opacity: 0;
+  transform: translateY(10px); /* Start slightly below */
+  animation: fade-in-out 2.5s ease forwards;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50%, 80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px); /* Exit slightly above */
+  }
+}
+
+ .highlight {
+   background: linear-gradient(to right, #00e5ff, violet);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: bold;
+ }
+
+ .btn {
+   display: inline-block;
+   margin-top: 0px;
+   padding: 12px 30px;
+   background: linear-gradient(to left,
+       rgb(0, 0, 95), rgb(0, 0, 0));
+   color: white;
+
+   border-radius: 25px;
+   font-weight: bold;
+   font-size: 16px;
+   cursor: pointer;
+   text-decoration: none;
+   transition: background 0.5s ease;
+ }
+
+ .btn:hover {
+   background: linear-gradient(to left,
+       rgba(0, 131, 175, 1), rgb(0, 0, 0, 1));
+
+ }
+
+ /* About Section */
+ .about {
+   padding-top: 15px;
+   padding-bottom: 35px;
+   padding-left: 10%;
+   text-align: left;
+   background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 40, 1));
+   /*background: black;*/
+ }
+
+ .about h2 {
+   color: white;
+   margin-bottom: 20px;
+   font-size: 2rem;
+ }
+
+ .about p {
+   font-size: 1.1rem;
+
+ }
+
+ .project-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 35px;
+   justify-items: center;
+ }
+
+ .project-card h3 {
+   margin: 15px 0 10px;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+ }
+
+ /* Contact Section */
+ .contact {
+   padding: 60px 20px;
+   text-align: center;
+   background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 40, 1));
+ }
+
+ .contact h2 {
+   color: white;
+   margin-bottom: 20px;
+   font-size: 2rem;
+ }
+
+ .contact form {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+ }
+
+ .contactP {
+   font-size: 0.6rem;
+ }
+
+ .contactA a {
+   color: cyan;
+ }
+
+ .contactA a:hover {
+   color: cyan;
+   font-weight: bold;
+ }
+
+ .contact input,
+ .contact textarea {
+   width: 90%;
+   max-width: 500px;
+   padding: 15px;
+   border: 2px solid #333;
+   border-radius: 25px;
+   font-size: 16px;
+   background: rgba(255, 255, 255, 0.1);
+   color: #e0e0e0;
+   backdrop-filter: blur(10px);
+   transition: border-color 0.6s ease;
+ }
+
+ .contact input:focus,
+ .contact textarea:focus {
+   outline: none;
+   /* Remove default outline */
+   border: 2px solid transparent;
+   /* Transparent border as base */
+   background-image: linear-gradient(145deg, rgba(0, 5, 35, 0.75), black), linear-gradient(45deg, cyan, purple);
+   /* Two layers */
+   background-origin: border-box;
+   /* Make the gradient align with the border */
+   background-clip: padding-box, border-box;
+   /* Keep the inner white and gradient on the border */
+ }
+
+ .contact button {
+   padding: 12px 30px;
+   background: linear-gradient(to right,
+       rgb(0, 0, 95), rgb(0, 0, 0));
+   color: white;
+   border: none;
+   border-radius: 25px;
+   font-weight: bold;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background 0.5s ease;
+   border: 2px solid rgb(0, 0, 75);
+ }
+
+ .contact button:hover {
+   background: linear-gradient(to right,
+       rgba(19, 131, 175, 1), rgba(0, 0, 0, 1));
+   border: 2px solid rgb(19, 131, 175);
+ }
+
+ /* Footer */
+ footer {
+   text-align: center;
+   padding: 15px 0;
+   background: linear-gradient(270deg,
+       rgba(0, 0, 70, 1), black);
+   color: #e0e0e0;
+   font-size: 0.9rem;
+   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+ }
+
+ /* Container for projects */
+ .projects {
+   background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 40, 1));
+   padding: 60px 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   align-items: center;
+   padding-top: 15px;
+   padding-bottom: 35px;
+   padding-left: 10%;
+   flex-wrap: wrap;
+   gap: 20px;
+ }
+
+ .projects h2 {
+   font-size: 2rem;
+   align-self: left;
+ }
+
+
+ /* Project Card Styling */
+ .project-card {
+   width: 270px;
+   padding: 25px;
+   background: linear-gradient(125deg,
+       rgba(0, 0, 95, 1), rgb(0, 0, 0, 1));
+   border-radius: 15px;
+   box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.1);
+   text-align: center;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
+ }
+
+ .project-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 3px 4px 0px rgba(0, 255, 255, 0.65);
+ }
+
+ /* Title Styling */
+ .project-card a {
+   text-decoration: none;
+   /* Removes underline */
+   color: white;
+   font-size: 1.5rem;
+   font-weight: bold;
+   transition: color 0.3s ease;
+ }
+
+ .calcCard {
+   width: 55px;
+ }
+
+
+ /*
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden; Hidden by default 
+    opacity: 0;  Transparent by default 
+    transition: visibility 0s, opacity 0.3s ease;
+}
+*/
+
+ .popup.show {
+   visibility: visible;
+   opacity: 1;
+ }
+
+ .popup {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   /* Semi-transparent overlay */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   visibility: hidden;
+   /* Hidden by default */
+   opacity: 0;
+   /* Transparent by default */
+   transition: visibility 0s, opacity 0.3s ease;
+ }
+
+
+ .switch {
+   display: inline-block;
+   position: relative;
+   width: 25px;
+   height: 15px;
+   border-radius: 20px;
+   background: #dfd9ea;
+   transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+   vertical-align: middle;
+   cursor: pointer;
+ }
+
+ .switch::before {
+   content: '';
+   position: absolute;
+   top: 1.4px;
+   left: 2px;
+   width: 12px;
+   height: 12px;
+   background: #fafafa;
+   border-radius: 50%;
+   transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .switch:active::before {
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+ }
+
+ input:checked+.switch {
+   background: #72da67;
+ }
+
+ input:checked+.switch::before {
+   left: 11.5px;
+   background: #fff;
+ }
+
+ input:checked+.switch:active::before {
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+ }
+
+ /* Container styling for alignment */
+ .switch-container {
+   display: inline-flex;
+   align-items: center;
+   /* Center text and switch vertically */
+   gap: 10px;
+   /* Space between the text and the switch */
+ }
+
+ /* Optional: Adjust the text styling if needed */
+ .switch-container p {
+   margin: 0;
+   /* Remove margin for better alignment */
+   font-size: 16px;
+   color: #e0e0e0;
+ }
+
+ #scrollElement {
+   transform: translateY(20%);
+   /* Initially off-screen */
+   opacity: 0;
+   /* Initially hidden */
+   transition: transform 1.s ease-out, opacity 1.3s ease-out;
+   /* Smooth transition */
+ }
+
+ #scrollElement.animate {
+   transform: translateY(0);
+   /* Move to original position */
+   opacity: 1;
+   /* Fade in */
+   transition: transform 1s ease-out, opacity 1s ease-out;
+ }
+
+ .pC {
+   transform: translateY(20%);
+   /* Initially off-screen */
+   opacity: 0;
+   /* Initially hidden */
+   transition: transform 1s ease-out, opacity 1s ease-out;
+   /* Smooth transition */
+ }
+
+ .pC.anim {
+   transform: translateY(0);
+   /* Move to original position */
+   opacity: 1;
+   /* Fade in */
+ }

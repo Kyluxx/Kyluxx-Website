@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyluxx's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <button id="open-btn" class="open-btn">☰ </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <img src="/assets/1000033097_prev_ui.png" alt="Kyluxx" class="heroImg">
+      <h1>Hi, I'm <span class="highlight">Kyluxx</span>!</h1>
+      <p id="heroText"></p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>About Kyluxx</h2>
+    <div id="scrollElement" class="scrollElement">
+      <!-- Content you want to animate -->
+      <div class="chat-container">
+        <!-- Bubble Chat -->
+        <div class="chat-bubble">
+          <p>
+            Kyluxx is just someone who loves learning new things. This website is a little corner where he shares his progress!
+          </p>
+          <br>
+          <div class="progCon">
+            <p class="p1">Javascript</p>
+            <p class="p2">80%</p>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+
+          <br>
+          <div class="progCon">
+            <p class="p1">CSS</p>
+            <p class="p2">60%</p>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar2"></div>
+          </div>
+
+          <br>
+          <div class="progCon">
+            <p class="p1">Money</p>
+            <p class="p2">0%</p>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar3" id="progress-bar3"></div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+  </section>
+
+  <section id="projects" class="projects">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Kyluxx's Projects</h2>
+    <div class="project-grid">
+
+      <div id="p1" class="pC">
+        <a href="/Calculator/index.html">
+          <div class="project-card">
+            <img src="/assets/calculator (3).png" class="calcCard">
+            <h3>Calculator</h3>
+          </div>
+        </a>
+      </div>
+
+      <div id="p2" class="pC">
+        <a href="/Math/index.html" id="p2">
+          <div class="project-card">
+            <img src="/assets/book.png" class="calcCard">
+            <h3>Math Game</h3>
+          </div>
+        </a>
+      </div>
+
+      <div id="p3" class="pC">
+        <a href="#projects" id="p3">
+          <div class="project-card">
+            <h3>N/A</h3>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <br>
+    <br>
+    <br>
+    <h2> Contact Kyluxx</h2>
+    <br>
+    <form id="my-form" action="https://formspree.io/f/meoqpleq" method="post">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p class="contactP">Don't like to wait? <span class="contactA"><a href="#contact" onclick="toggleOffcanvas()">Check</a></span> out my social media!</p>
+  </section>
+
+  <footer>
+    <p>Made with 💖⠀ | ⠀ Thanks for visiting!</p>
+  </footer>
+
+  <div id="offcanvas" class="offcanvas">
+    <!--<button class="close-btn" id="close-btn">×</button>-->
+    <ul>
+      <h1>Kyluxx</h1>
+      <h1>Workspace</h1>
+      <br>
+      <div class="sosmedCon">
+        <img src="/assets/communication.png" alt="" class="offCanvaslogo">
+        <li><a class="gmail" href="mailto: rizkypratamaikok@gmail.com?subject=A letter from the 'Unknown' &body= Send your message here...">Email</a></li>
+      </div>
+      <div class="sosmedCon">
+        <img src="/assets/instagram.png" alt="" class="offCanvaslogo">
+        <li><a class="ig" href="https://www.instagram.com/verifiedhopeless?igsh=djhwNGJsbGVycTNs">Instagram</a></li>
+      </div>
+      <div class="sosmedCon">
+        <img src="/assets/whatsapp.png" class="offCanvaslogo">
+        <li><a class="wa" href="https://wa.me/+62895634600989">Whatsapp</a></li>
+      </div>
+      <div class="sosmedConD">
+        <img src="/assets/melody.png" class="offCanvaslogoD">
+        <li><a id="current-song" class="music" onclick="songOn()">C148</a></li>
+          <audio id="audioPlayer" src=""></audio>
+      </div>
+
+    </ul>
+
+    <!--
+    <h1>
+      Misc
+    </h1>
+    <div class="switch-container">
+      <input type="checkbox" hidden="hidden" id="username">
+      <label class="switch" for="username"></label>
+      <p>Music</p>
+    </div>
+    -->
+
+    <h4 class="offcanvas-copyright">© 2024 Kyluxx | All Rights Reserved</h4>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
