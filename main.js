@@ -38,11 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }); // Reset others to white
         if (link) {
           link.style.color = "#00e5ff";
-          //link.style.borderBottom = "2px solid #00e5ff"; // Add custom underline
-          // link.style.paddingBottom = "4px"; // Add spacing between text and border
-
         } // Highlight current section
-
+        
         // Trigger animation when the About section enters the viewport
         if (entry.target === aboutSection) {
           console.log('activated')
@@ -115,11 +112,6 @@ const openBtn = document.getElementById('open-btn');
 
 document.getElementById('open-btn').onclick = toggleOffcanvas;
 
-/*document.getElementById('close-btn').onclick = function() {
-  offcanvas.style.left = '-100%';
-  overlay.style.display = 'none';
-}*/
-
 function toggleOffcanvas() {
 
   offcanvas.style.left = '0';
@@ -183,27 +175,6 @@ function songOff() {
   audioPlayer.src = ''; // Clear the source (do not use null)
 }
 
-/*
-switchOn.addEventListener('change', () => {
-  if (switchOn.checked) {
-    songOn();
-    audioPlayer.addEventListener("ended", () => {
-      currentSongIndex = (currentSongIndex + 1) % playlist.length; // Loop back to the start
-      const nextSong = playlist[currentSongIndex];
-      audioPlayer.src = nextSong.src; // Set the next song
-      currentSongText.textContent = nextSong.title; // Update the title
-      audioPlayer.play().catch((error) => {
-        if (error.name !== "AbortError") {
-          console.error("Error playing audio:", error);
-        }
-      });
-    });
-  } else {
-    songOff();
-  }
-});
-*/
-
 function animateProgressBar(...p) {
   const progressBar = document.getElementById('progress-bar');
   const progressBar2 = document.getElementById('progress-bar2');
@@ -213,37 +184,3 @@ function animateProgressBar(...p) {
   progressBar2.style.width = `${p[1]}%`;
   progressBar3.style.width = `${p[2]}%`;
 }
-
-// Example: Fill the bar to 75% after 1 second
-
-// Automatically switch to the next song when the current one ends
-
-/*
- // Get elements
-const popup = document.getElementById('popup');
-const closePopup = document.getElementById('closePopup');
-const yesClosePopup = document.getElementById('yesClosePopup');
-
-// Show popup when the page loads
-window.addEventListener('load', () => {
-    popup.classList.add('show');
-});
-
-// Close popup when clicking the close button
-closePopup.addEventListener('click', () => {
-    popup.classList.remove('show');
-  
-});
-
-yesClosePopup.addEventListener('click', () => {
-      popup.classList.remove('show');
-  });
-*/
-
-const element = document.querySelector('.heroImg'); // Select the element
-console.log(getComputedStyle(element).zIndex); // Log the z-index value
-const elementA = document.querySelector('.heroImg');
-const afterStyles = getComputedStyle(elementA, '::after');
-
-console.log(afterStyles.content); // Logs the 'content' property of ::after
-console.log(afterStyles.background); // Logs the background property
