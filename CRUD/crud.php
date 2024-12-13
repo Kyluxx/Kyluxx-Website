@@ -9,7 +9,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 // Database connection
-$conn = new mysqli('127.0.0.1', 'root', 'rizky', 'crud_system');
+ $conn = new mysqli('sql312.infinityfree.com', 'if0_37813062', 'Letmetryhost45', 'if0_37813062_crud_system');
 
 // Check connection
 if ($conn->connect_error) {
