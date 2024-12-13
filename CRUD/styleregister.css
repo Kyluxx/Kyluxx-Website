@@ -1,0 +1,125 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern, professional font */
+    box-sizing: border-box;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #1a1a1a); /* Subtle gradient for body */
+    color: #e0e0e0; /* Light gray text */
+}
+
+/* Container */
+.container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* Gradient with depth */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, #00bcd4, #0062B1); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase; /* Adds a formal look */
+    letter-spacing: 2px; /* Slight spacing for elegance */
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 12px; /* Slightly more formal rounded edges */
+    font-size: 1rem;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #2c2c2c, #3a3a3a); /* Gradient background */
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input::placeholder {
+    color: #aaa; /* Softer placeholder */
+    font-style: italic;
+}
+
+form input:focus {
+    outline: none;
+    background: linear-gradient(135deg, #333, #444); /* Subtle focus gradient */
+    border: 2px solid #00bcd4; /* Cyan border on focus */
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.7); /* Glow effect */
+}
+
+/* Buttons */
+form button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #00bcd4, #024386); /* Gradient for button */
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase; /* Adds a professional look */
+    letter-spacing: 1px; /* Slight spacing */
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #00bcd4, #0082b3); /* Slightly lighter gradient */
+    transform: translateY(-3px); /* Hover elevation */
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5); /* Soft glow on hover */
+}
+
+/* Links */
+p {
+    font-size: 0.9rem;
+    color: #bbb; /* Softer gray */
+}
+
+p a {
+    color: #00bcd4; /* Cyan */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #0082b3; /* Slightly darker cyan */
+    text-decoration: underline;
+}
+
+/* Interactive Animations */
+form input:focus,
+form button:hover {
+    animation: pulse 0.8s infinite alternate; /* Pulse animation for focus and hover */
+}
+
+/* Keyframes for Pulse */
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(0, 188, 212, 0.8);
+    }
+}
+
+/* Add-ons */
+.container:hover {
+    transform: scale(1.02); /* Subtle container scaling for interactivity */
+    transition: transform 0.3s ease;
+}

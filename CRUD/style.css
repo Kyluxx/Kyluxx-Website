@@ -1,0 +1,121 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-25deg, #0B0D0D, #2A0C4F);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px 50px;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #E9DDFF;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7e57c2;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(126, 87, 194, 0.5);
+}
+
+.form-group input::placeholder {
+  color: #A5A5C7; /* A light grayish color */
+}
+
+textarea::placeholder {
+  color: #a3a3c2; /* Same placeholder color for textareas */
+}
+
+.btn {
+  background: linear-gradient(100deg, #7b1fa2, #512da8);
+  color: white;
+  border: none;
+  border-radius: 8px; /* Matches the input border-radius */
+  padding: 12px; /* Same padding as input */
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; /* Matches the input width */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(123, 31, 162, 0.5);
+}
+
+/* Links */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #7e57c2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.register-link a:hover {
+  color: #b39ddb;
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff5252;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(255, 82, 82, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 82, 82, 0.5);
+}
