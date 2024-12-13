@@ -1,44 +1,28 @@
-<?php
-// Database connection
-$conn = new mysqli('sql312.infinityfree.com', 'if0_37813062', 'Letmetryhost45', 'if0_37813062_crud_system');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styleregister.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <!-- Display message -->
+        <?php if (!empty($message)): ?>
+            <div class="message <?php echo isset($message_type) && $message_type === 'success' ? 'success' : 'error'; ?>">
+                <?php echo $message; ?>
+            </div>
+        <?php endif; ?>
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate inputs
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-
-    // Check if passwords match
-    if ($password !== $confirm_password) {
-        echo "Passwords do not match!";
-        exit;
-    }
-
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-
-    // Check if username already exists
-    $check_sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $conn->query($check_sql);
-
-    if ($result->num_rows > 0) {
-        echo "Username already taken!";
-    } else {
-        // Insert user into the database
-        $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
-        if ($conn->query($sql) === TRUE) {
-            echo "Registration successful! <a href='index.html'>Login here</a>";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    }
-}
-
-$conn->close();
-?>
+        <form action="registerid.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="index.php">Login here</a></p>
+    </div>
+</body>
+</html>

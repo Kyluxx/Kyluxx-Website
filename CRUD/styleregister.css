@@ -123,3 +123,22 @@ form button:hover {
     transform: scale(1.02); /* Subtle container scaling for interactivity */
     transition: transform 0.3s ease;
 }
+
+/* Message styles */
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+}
+
+.message.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
