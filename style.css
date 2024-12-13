@@ -52,7 +52,7 @@
    height: 100%;
    background: linear-gradient(to right, #00e5ff, #007bff);
    border-radius: 5px;
-   transition: width 2s ease-in-out;
+   transition: width 1.5s ease-in-out;
    /* Smooth animation */
  }
 
@@ -62,7 +62,7 @@
    height: 100%;
    background: linear-gradient(to right, #00e5ff, #007bff);
    border-radius: 5px;
-   transition: width 3s ease-in-out;
+   transition: width 1.5s ease-in-out;
  }
 
  .chat-container {
@@ -359,12 +359,23 @@
   }
 }
 
- .highlight {
-   background: linear-gradient(to right, #00e5ff, violet);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   font-weight: bold;
- }
+.highlight {
+  font-weight: bold;
+  background: linear-gradient(to right, #00e5ff, violet, #00e5ff);
+  background-size: 200%; /* Extend the gradient for a smooth passing effect */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: passingBy 1.5s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes passingBy {
+  0% {
+    background-position: 100% 50%; /* Start gradient off-screen on the right */
+  }
+  100% {
+    background-position: -100% 50%; /* Move gradient off-screen on the left */
+  }
+}
 
  .btn {
    display: inline-block;

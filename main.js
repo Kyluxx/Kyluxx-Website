@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Highlight navbar links based on visible section and trigger animation for About
   const observerOptions = {
     root: null, // Observe relative to the viewport
-    threshold: 0.6, // 60% of the section is visible
+    threshold: 0.65, // 60% of the section is visible
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -39,12 +39,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (link) {
           link.style.color = "#00e5ff";
         } // Highlight current section
-        
+
         // Trigger animation when the About section enters the viewport
         if (entry.target === aboutSection) {
           console.log('activated')
           scrollElement.classList.add('animate'); // Add class to trigger animation
-          setTimeout(() => animateProgressBar(80, 60, 0), 1000);
+          setTimeout(() => animateProgressBar(80, 60, 0), 750)
+          setTimeout(() => {
+            aboutIsLoaded = true;
+          }, 751);
         }
 
         if (entry.target === projectSection && cardisLoaded === false) {
@@ -90,7 +93,7 @@ function updateHero() {
   newText.classList.add("fade");
 
   // Replace the text in the hero element
-  heroText.innerHTML = "I'm a "; // Clear previous content
+  heroText.textContent = "I'm a "; // Clear previous content
   heroText.appendChild(newText); // Add new animated text
 
   // Update index for the next text
@@ -179,8 +182,66 @@ function animateProgressBar(...p) {
   const progressBar = document.getElementById('progress-bar');
   const progressBar2 = document.getElementById('progress-bar2');
   const progressBar3 = document.getElementById('progress-bar3');
-  // Set the width to the given percentage
-  progressBar.style.width = `${p[0]}%`;
-  progressBar2.style.width = `${p[1]}%`;
-  progressBar3.style.width = `${p[2]}%`;
+  const pr1 = document.getElementById('pr1');
+  const pr2 = document.getElementById('pr2');
+  const pr3 = document.getElementById('pr3');
+
+  let counter = 0;
+  let t1 = false;
+  let t1n = false;
+  let t2 = false;
+  let t2n = false;
+  let t3 = false;
+  let t3n = false;
+
+  if (!aboutIsLoaded) {
+    const id = setInterval(() => {
+      if (counter < p[0] && t1n === false) {
+        if (!t1) {
+          progressBar.style.width = `${p[0]}%`;
+          t1 = true;
+        }
+        counter += 1;
+        //console.log(counter)
+        pr1.textContent = `${counter}%`;
+        if (counter == p[0]) {
+          counter = 0;
+          t1n = true;
+        }
+      }
+      else if (counter < p[1] && t2n === false) {
+        if (!t2) {
+          progressBar2.style.width = `${p[1]}%`;
+          t2 = true;
+        }
+        counter += 1;
+        //console.log(counter)
+        pr2.textContent = `${counter}%`;
+        if (counter == p[1]) {
+          counter = 100;
+          t2n = true;
+          //console.log('counter reseted')
+        }
+      }
+      else if (counter >= p[2] && t3n === false) {
+        if (!t3) {
+          progressBar3.style.width = `${p[2]}%`;
+          t3 = true;
+        }
+        counter -= 1;
+        //console.log(counter)
+        pr3.textContent = `${counter}%`;
+        if (counter == p[2]) {
+          //counter = 0;
+          t3n = true;
+        }
+        console.log('t3')
+      }
+      if(t1n && t2n && t3n){
+        clearInterval(id);
+      }
+    }, 15);
+  }
 }
+
+let aboutIsLoaded = false;
