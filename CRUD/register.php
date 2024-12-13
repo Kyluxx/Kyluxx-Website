@@ -9,10 +9,15 @@
 <body>
     <div class="container">
         <h1>Create an Account</h1>
-        <!-- Display message -->
-        <?php if (!empty($message)): ?>
-            <div class="message <?php echo isset($message_type) && $message_type === 'success' ? 'success' : 'error'; ?>">
-                <?php echo $message; ?>
+
+        <!-- Display success or error message -->
+        <?php if (isset($_GET['success'])): ?>
+            <div class="message success">
+                <?php echo htmlspecialchars($_GET['success']); ?>
+            </div>
+        <?php elseif (isset($_GET['error'])): ?>
+            <div class="message error">
+                <?php echo htmlspecialchars($_GET['error']); ?>
             </div>
         <?php endif; ?>
 
